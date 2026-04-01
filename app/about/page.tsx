@@ -37,21 +37,27 @@ const stats = [
 
 const team = [
   {
-    name: "Ayesha Rahman",
+    name: "Shakila Sharmin Jui",
     role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+    image: "/assets/shakila.jpeg",
     bio: "Passionate about preserving Bangladeshi heritage and empowering rural artisans.",
   },
   {
-    name: "Karim Ahmed",
+    name: "Rita Khatun",
     role: "Head of Artisan Relations",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    image: "",
     bio: "Works directly with artisan communities across all 64 districts.",
   },
   {
-    name: "Fatima Begum",
+    name: "Asma Akter",
     role: "Creative Director",
-    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80",
+    image: "/assets/tisha.jpeg",
+    bio: "Curates our collection and works with artisans on product development.",
+  },
+  {
+    name: "Noshin Nawar Parika",
+    role: "Assistant Creative Director",
+    image: "parr.jpeg",
     bio: "Curates our collection and works with artisans on product development.",
   },
 ];
@@ -119,7 +125,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="overflow-hidden rounded-lg">
                     <Image
-                      src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80"
+                      src="/assets/monis-yousafzai-s5-q5A5PanA-unsplash.jpg"
                       alt="Artisan weaving"
                       width={300}
                       height={400}
@@ -128,7 +134,7 @@ export default function AboutPage() {
                   </div>
                   <div className="overflow-hidden rounded-lg">
                     <Image
-                      src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80"
+                      src="/assets/bamboo.jpg"
                       alt="Traditional pottery"
                       width={300}
                       height={200}
@@ -139,7 +145,7 @@ export default function AboutPage() {
                 <div className="space-y-4 pt-8">
                   <div className="overflow-hidden rounded-lg">
                     <Image
-                      src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&q=80"
+                      src="/assets/katha.jpeg"
                       alt="Bamboo weaving"
                       width={300}
                       height={200}
@@ -148,7 +154,7 @@ export default function AboutPage() {
                   </div>
                   <div className="overflow-hidden rounded-lg">
                     <Image
-                      src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80"
+                      src="/assets/hh.webp"
                       alt="Jamdani fabric"
                       width={300}
                       height={400}
