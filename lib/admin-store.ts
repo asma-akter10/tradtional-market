@@ -318,8 +318,7 @@ function normalizeAdminArtisan(value: unknown, index: number): AdminArtisan | nu
     id,
     name,
     image:
-      asString(value.image).trim() ||
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+      asString(value.image).trim(),
     district: asString(value.district, "Unknown"),
     districtId: asString(value.districtId, "unknown"),
     specialty: asString(value.specialty, "Traditional Crafts"),
@@ -349,8 +348,7 @@ function normalizeAdminCategory(value: unknown, index: number): AdminCategory | 
     id,
     name,
     image:
-      asString(value.image).trim() ||
-      "https://images.unsplash.com/photo-1601662528567-526cd06f6582?w=600&q=80",
+      asString(value.image).trim(),
     description: asString(value.description, ""),
     productCount: Math.max(0, Math.floor(asNumber(value.productCount, 0))),
     active: asBoolean(value.active, true),

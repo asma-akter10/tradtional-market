@@ -72,25 +72,47 @@ export function getDynamicDistricts(): District[] {
   );
 }
 
+// export function getDynamicArtisans(): Artisan[] {
+//   const catalogProducts = getCatalogProducts();
+//   const adminArtisans = getAdminArtisans().filter((artisan) => artisan.active);
+//   const sourceArtisans = adminArtisans.length > 0 ? adminArtisans : seedArtisans;
+//   const productCountByArtisan = buildProductCountMap(catalogProducts, "artisanId");
+
+//   return dedupeById(
+//     sourceArtisans.map((artisan) => ({
+//       id: artisan.id,
+//       name: artisan.name,
+//       image: artisan.image,
+//       district: artisan.district,
+//       districtId: artisan.districtId,
+//       specialty: artisan.specialty,
+//       bio: artisan.bio,
+//       story: artisan.story,
+//       yearsOfExperience: artisan.yearsOfExperience,
+//       productCount: productCountByArtisan.get(artisan.id) ?? 0,
+//     }))
+//   );
+// }
 export function getDynamicArtisans(): Artisan[] {
   const catalogProducts = getCatalogProducts();
-  const adminArtisans = getAdminArtisans().filter((artisan) => artisan.active);
-  const sourceArtisans = adminArtisans.length > 0 ? adminArtisans : seedArtisans;
+  const adminArtisans = getAdminArtisans();
   const productCountByArtisan = buildProductCountMap(catalogProducts, "artisanId");
 
   return dedupeById(
-    sourceArtisans.map((artisan) => ({
-      id: artisan.id,
-      name: artisan.name,
-      image: artisan.image,
-      district: artisan.district,
-      districtId: artisan.districtId,
-      specialty: artisan.specialty,
-      bio: artisan.bio,
-      story: artisan.story,
-      yearsOfExperience: artisan.yearsOfExperience,
-      productCount: productCountByArtisan.get(artisan.id) ?? 0,
-    }))
+    adminArtisans
+      .filter((artisan) => artisan.active !== false)
+      .map((artisan) => ({
+        id: artisan.id,
+        name: artisan.name,
+        image: artisan.image,
+        district: artisan.district,
+        districtId: artisan.districtId,
+        specialty: artisan.specialty,
+        bio: artisan.bio,
+        story: artisan.story,
+        yearsOfExperience: artisan.yearsOfExperience,
+        productCount: productCountByArtisan.get(artisan.id) ?? 0,
+      }))
   );
 }
 
